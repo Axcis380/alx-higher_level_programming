@@ -1,7 +1,12 @@
-def magic_calculation(a, b):
-    result = 98  # LOAD_CONST 1 (98)
-    result += a  # LOAD_FAST 0 (a)
-    result += b  # LOAD_FAST 1 (b)
-    result = result ** b  # BINARY_POWER
-    result += a + b  # BINARY_ADD
-    return result  # RETURN_VALUE
+# Define the bytecode instructions as a multiline string
+bytecode_instructions = """
+  3           0 LOAD_CONST               1 (98)
+              3 LOAD_FAST                0 (a)
+              6 LOAD_FAST                1 (b)
+              9 BINARY_POWER
+             10 BINARY_ADD
+             11 RETURN_VALUE
+"""
+
+# Print the bytecode instructions
+print(bytecode_instructions)
