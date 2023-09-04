@@ -12,11 +12,17 @@ if [ ! -f "$PYFILE" ]; then
     exit 1
 fi
 
-# Compile the Python script and save it as PYFILEc.pyc
+# Compile the Python script
 python3 -m py_compile "$PYFILE"
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
+    # Extract the base filename (without extension) from PYFILE
+    BASENAME=$(basename -- "$PYFILE")
+    BASENAME_NOEXT="${BASENAME%.py}"
+
+    # Rename the .pyc file to match the desired format
+    mv "__pycache__/${BASENAME_NOEXT}.cpython-38.pyc" "${BASENAME_NOEXT}c.pyc"
     echo "Compilation of $PYFILE successful."
 else
     echo "Error: Compilation of $PYFILE failed."
