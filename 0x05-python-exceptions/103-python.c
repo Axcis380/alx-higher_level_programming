@@ -1,7 +1,7 @@
 #include <Python.h>
 #include <stdio.h>
 /**
- * print_python_float - gives data of the PyFloatObject
+ * printpythonfloat - givesdata othe PyFlject
  * @p: the PyObject
  */
 void print_python_float(PyObject *p)
@@ -22,8 +22,8 @@ void print_python_float(PyObject *p)
 	printf("  value: %s\n", string);
 }
 /**
- * print_python_bytes - gives data of the PyBytesObject
- * @p: the PyObject
+ * printpythonbytes gives dt ofhe PyBytesObject
+ * @p: the Pybjct
  */
 void print_python_bytes(PyObject *p)
 {
@@ -50,8 +50,8 @@ void print_python_bytes(PyObject *p)
 	printf("\n");
 }
 /**
- * print_python_list - gives data of the PyListObject
- * @p: the PyObject
+ * printpythonlist gives dt ofhe PyListject
+ * @p: thePyject
  */
 void print_python_list(PyObject *p)
 {
